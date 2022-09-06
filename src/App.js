@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 import alanBtn from '@alan-ai/alan-sdk-web'
 
@@ -29,10 +31,16 @@ function App() {
   return (
     <div className="App">
       {menuItems.map(menuItem => (
-        <li key={menuItem.name}>
-          {menuItem.name} - ${menuItem.price} - {menuItem.category}
-          <button onClick={() => addToCart(menuItem)}>add to cart</button>
-        </li>
+        
+        <Card key={menuItem.name} style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={menuItem.image} />
+        <Card.Body>
+        <Card.Title>{menuItem.name}</Card.Title>
+        <Card.Title>${menuItem.price}</Card.Title>
+        <Card.Title>{menuItem.category}</Card.Title>
+        <Button variant="primary" onClick={() => addToCart(menuItem)}>add to cart</Button>
+        </Card.Body>
+        </Card>
         
       ))}
       <h2>Cart</h2>
