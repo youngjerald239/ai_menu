@@ -31,6 +31,9 @@ function App() {
 
   return (
     <div className="App">
+         <h2>You Are What You Eat</h2>
+         <h3>A health concious, Enviormentaly friendly  restaurant</h3>
+         <h3>To begin, click the mic and say "Show me the Menu"</h3>
          <h2>Menu</h2>
       {menuItems.map(menuItem => (
         
