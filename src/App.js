@@ -2,24 +2,6 @@ import React, {useState, useEffect} from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './app.css'
-import IMG1 from './images/img1.png'
-import IMG2 from './images/img2.jpg'
-import IMG3 from './images/img3.jpg'
-import IMG4 from './images/img4.jpg'
-import IMG5 from './images/img5.jpg'
-import IMG6 from './images/img6.jpg'
-// import IMG7 from './images/img7.jpg'
-// import IMG8 from './images/img8.jpg'
-// import IMG9 from './images/img9.jpg'
-// import IMG10 from './images/img10.jpg'
-// import IMG11 from './images/img11.jpg'
-// import IMG12 from './images/img12.jpg'
-// import IMG13 from './images/img13.jpg'
-// import IMG14 from './images/img14.jpg'
-// import IMG15 from './images/img15.jpg'
-
-
-
 
 import alanBtn from '@alan-ai/alan-sdk-web'
 
@@ -53,7 +35,7 @@ function App() {
       {menuItems.map(menuItem => (
         
         <Card className="card" key={menuItem.name} style={{ width: '18rem' }}>
-        <Card.Img className="card__img" variant="top" src={IMG1} />
+        <Card.Img className="card__img" variant="top" src={menuItem.image} />
         <Card.Body>
         <Card.Title className="card__name" >{menuItem.name}</Card.Title>
         <Card.Title className="card__name" >${menuItem.price}</Card.Title>
