@@ -32,8 +32,8 @@ function App() {
   return (
     <div className="App">
          <h2>You Are What You Eat</h2>
-         <h3>A health concious, Enviormentaly friendly  restaurant</h3>
-         <h3>To begin, click the mic and say "Show me the Menu"</h3>
+         <h3>A health concious restaurant</h3>
+         <h3>To begin, click mic and say "Show me the Menu"</h3>
          <h2>Menu</h2>
       {menuItems.map(menuItem => (
         
@@ -43,7 +43,7 @@ function App() {
         <Card.Title className="card__name" >{menuItem.name}</Card.Title>
         <Card.Title className="card__name" >${menuItem.price}</Card.Title>
         <Card.Title className="card__name" >{menuItem.category}</Card.Title>
-        <Card.Text>
+        <Card.Text className="card__text">
           These meals are hand-crafted with freshly grown ingredients. We offer many health concious meals, and our Beef, chicken, and turkey are raised healthy too!
         </Card.Text>
         <Button className="card__btn" variant="primary" onClick={() => addToCart(menuItem)}>add to cart</Button>
