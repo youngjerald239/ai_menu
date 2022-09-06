@@ -1,10 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
   background-image: url(./images/menubkg.jpg);
   font-family: sans-serif;
   padding: 20px;
   color: rgb(250, 244, 244);
-  max-width: auto;
-  max-height: auto;
+  max-width: 800px;
+  max-height: 800px;
  
 }
 
