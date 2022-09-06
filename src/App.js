@@ -13,6 +13,8 @@ function App() {
       onCommand: (commandData) => {
         if(commandData.command === 'getMenu'){
           setMenuItems(commandData.data)
+        } else if(commandData.command === 'addToCart'){
+          addToCart(commandData.data)
         }
       }
   });
