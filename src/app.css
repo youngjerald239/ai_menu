@@ -1,0 +1,21 @@
+body {
+  background-image: url(./images/menubkg.jpg);
+  font-family: sans-serif;
+  padding: 20px;
+  color: rgb(250, 244, 244);
+  max-width: auto;
+  max-height: auto;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.App {
+  width: 80%;
+  background-color: rgb(46, 46, 45);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}

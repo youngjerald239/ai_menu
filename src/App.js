@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './app.css'
 
 import alanBtn from '@alan-ai/alan-sdk-web'
 
@@ -32,13 +33,16 @@ function App() {
     <div className="App">
       {menuItems.map(menuItem => (
         
-        <Card key={menuItem.name} style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={menuItem.image} />
+        <Card className="card" key={menuItem.name} style={{ width: '18rem' }}>
+        <Card.Img className="card__img" variant="top" src={menuItem.image} />
         <Card.Body>
-        <Card.Title>{menuItem.name}</Card.Title>
-        <Card.Title>${menuItem.price}</Card.Title>
-        <Card.Title>{menuItem.category}</Card.Title>
-        <Button variant="primary" onClick={() => addToCart(menuItem)}>add to cart</Button>
+        <Card.Title className="card__name" >{menuItem.name}</Card.Title>
+        <Card.Title className="card__name" >${menuItem.price}</Card.Title>
+        <Card.Title className="card__name" >{menuItem.category}</Card.Title>
+        <Card.Text>
+          These meals are hand-crafted with freshly grown ingredients. We offer many health concious meals, and our Beef, chicken, and turkey are raised healthy too!
+        </Card.Text>
+        <Button className="card__btn" variant="primary" onClick={() => addToCart(menuItem)}>add to cart</Button>
         </Card.Body>
         </Card>
         
